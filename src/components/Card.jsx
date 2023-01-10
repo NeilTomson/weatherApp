@@ -3,7 +3,6 @@ import axios from "axios";
 
 function Card(location, toggle) {
   const [data, setData] = useState("");
-  
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location.location}&units=metric&appid=${import.meta.env.VITE_API_KEY}`;
 
