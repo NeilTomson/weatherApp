@@ -5,6 +5,9 @@ import { TiDelete } from "react-icons/ti";
 
 function New(props) {
   const data = useRef();
+  
+
+
   const handleClick = () => {
 
     if (localStorage.getItem("location") == null) {
@@ -15,7 +18,7 @@ function New(props) {
 
     localStorage.setItem("location", JSON.stringify(oldData));
     props.toggleElement()
-    
+    data.current.value = ""    
   };
 
   return (
@@ -34,6 +37,7 @@ function New(props) {
             type="text"
             placeholder="input"
             ref={data}
+
           />
           <button
             className="text-black mt-5 bg-white px-6 py-3 rounded-lg uppercase "
